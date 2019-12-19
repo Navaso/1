@@ -263,6 +263,17 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href='files/style-252.arb.css' media="all">
 <script type="text/javascript" src='files/jquery.min-6ac.arb.js'></script>
+  <!--- проброс пикселя (вставить это между тегами head) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-url/2.5.3/url.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+  <script>
+    $(function() {
+      if (url('?pixel')) Cookies.set('pixel', url('?pixel'), {expires: 30});
+      if (url('?sid1')) Cookies.set('sid1', url('?sid1'), {expires: 30});
+    });
+  </script>
+  <!--- проброс пикселя (вставить это между тегами head) -->
 <script type="text/javascript">
     function date(d) {
         var now = new Date();
